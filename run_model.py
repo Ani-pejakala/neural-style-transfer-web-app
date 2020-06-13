@@ -30,8 +30,7 @@ def forward_pass(model_name, image_name, style):
     start = time.time()
     output = model.forward()
     end = time.time()
-    print("[INFO] neural style transfer took {:.4f} seconds".format(
-        end - start))
+    print(end-start)
     output = output.reshape(3, output.shape[2], output.shape[3])
     output[0] += 103.939
     output[1] += 116.779
